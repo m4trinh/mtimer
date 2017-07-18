@@ -1,0 +1,20 @@
+.timer{
+  position: fixed; 
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 150px;
+}
+body{
+  font-family: 'Bitter', serif;
+
+}
+h1{
+	margin-top: 150px;
+	text-align: center;
+	font-size: 50px;
+}
+h2{
+	text-align: center;
+	margin-top: 50px;
+}

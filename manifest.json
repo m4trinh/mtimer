@@ -1,0 +1,23 @@
+{
+	"browser_action": {
+     	  "default_icon": "icon32.png",
+     	  "default_title": "mTimer",
+     	  "default_popup": "index.html"
+
+
+   },
+	"name": "mTimer",
+	"version": "1.11",
+	"manifest_version": 2,
+	"description": "Rubik's Cube Speed Timer",
+	
+	
+	"icons": {  
+		"16": "icon16.png",
+		"32": "icon32.png",
+		"128" : "icon128.png"
+	
+    }
+	
+
+}
