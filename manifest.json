@@ -1,11 +1,14 @@
 {
 	"browser_action": {
-     	  "default_icon": "icon32.png",
+     	  "default_icon": "icon128.png",
      	  "default_title": "mTimer",
-     	  "default_popup": "index.html"
+     	  "default_popup": "popup.html"
 
 
    },
+   "permissions": [
+    "tabs"
+  ],
 	"name": "mTimer",
 	"version": "1.11",
 	"manifest_version": 2,

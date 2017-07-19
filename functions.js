@@ -6,7 +6,7 @@ var mSecond = 0;
 var second = 0;
 var minute = 0;
 var hour = 0;
-
+var moves = ['R\'','L\'','U\'','D\'','F\'','B\'','R','L','U','D','F','B'];
 function start () {
   stop();
   //If the time is less than 10 milliseconds, it will use 10 milliseconds...this changes up the math....
@@ -27,6 +27,7 @@ function changeValue() {
 }
 
 var stop = function () {
+	generateScramble(); 
   clearInterval(timerInterval);
   totalmSecond =0;
   mSecond = 0;
@@ -54,14 +55,24 @@ document.onkeydown = function (e) {
     }
 }
 
-chrome.app.runtime.onLaunched.addListener(function() {
-  chrome.app.window.create('index.html', {
-    'outerBounds': {
-      'width': 800,
-      'height': 1000
-    }
-  });
+document.addEventListener('DOMContentLoaded', function() {
+    var link = document.getElementById('execute');
+    // onClick's logic below:
+    link.addEventListener('click', function() {
+        chrome.tabs.create({url: "main.html"});
+    });
 });
+  
+
+function generateScramble(){
+	var myString = ""; 
+	for(i = 0;i < 20;i++){
+
+		myString += moves[Math.round(Math.random()*10)+(Math.random()<0.5?1:0)] + ' ';
+
+	}
+	document.getElementById("scramble").innerHTML = myString;
 }
 
 
+}
