@@ -1,5 +1,5 @@
 .timer{
-  font-size: 50px;
+  font-size: 45px;
 }
 body{
   font-family: 'Bitter', serif;
@@ -11,8 +11,18 @@ h1{
 }
 h2{
 	text-align: center;
-	margin-top: 50px;
+	margin-top: 25px;
 }
 h3{
 	font-size: 30px;
+}
+.fullVersionButton{
+	border-style: solid;
+	border-color: black;
+	height:50px ;
+	width: 100px;
+}
+.stats{
+	margin-top: 0;
+	margin-bottom: 0;
 }
