@@ -1,21 +1,19 @@
 .timer{
-  font-size: 45px;
+	  font-size: 200;
 }
 body{
-  font-family: 'Bitter', serif;
-  text-align: center;
+	font-family: 'Didact Gothic', sans-serif;
+	background-color: #2ab7ea;
 }
 h1{
-	text-align: center;
-	font-size: 50px;
+	font-size: 70px;
 }
 h2{
-	text-align: center;
-	margin-top: 25px;
+	margin-top: 30px;
 }
 h3{
-	font-size: 30px;
-}
+	font-size: 45px;
+}	
 .fullVersionButton{
 	border-style: solid;
 	border-color: black;
@@ -25,4 +23,10 @@ h3{
 .stats{
 	margin-top: 0;
 	margin-bottom: 0;
+	height: 40px;
+}
+.blank-space{
+	display: block;
+	margin: 50px; 
+	
 }
