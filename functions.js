@@ -5,12 +5,14 @@ var totalmSecond = 0;
 var mSecond = 0;
 var second = 0;
 var minute = 0;
-var moves = ['R\'','L\'','U\'','D\'','F\'','B\'','R','L','U','D','F','B'];
+var moves = ['R\'','R','2R','L\'','L','2L','U\'','U','2U','D\'','D','2D','F\'','F','2F','B\'','B','2B'];
 var totalSolves = 0;
 var avgThree = 0;
 var avgFive = 0;
 var avgTen = 0;
 var times = [];
+var scrambleSize = 20;
+var isRunning = false;
 
 function start () {
   
@@ -39,7 +41,6 @@ function formatTime(totalmSecond){
 
 
 var stop = function () {
-
 	generateScramble(); 
   times.push(totalmSecond);
   clearInterval(timerInterval);
@@ -79,33 +80,51 @@ var stop = function () {
 }
 
 
-var isRunning = false;
 document.onkeydown = function (e) {
     if (e.keyCode == 32) {
     	
-    	if(isRunning){
-        stop();
-  		  isRunning = false;
-        
-    	}else{
-        start();
-    		isRunning = true;
-    		
-
-    	}
-    	
+    	modifyTimer();
     	
     }
+} 
+
+function modifyTimer(){
+  if(isRunning){
+        stop();
+        isRunning = false;
+        
+      }else{
+        start();
+        isRunning = true;
+        
+
+      }
 }
 
+//Did not account for cases of 2L 2R 2L, 2F 2B 2F, etc....
 function generateScramble(){
-  var myString = ""; 
-  for(i = 0;i < 20;i++){
+  var myArr = [ ];
+  var lastIndex = 0;
 
-    myString += moves[Math.round(Math.random()*10)+(Math.random()<0.5?1:0)] + ' ';
+  for(i = 0;i < scrambleSize;i++){
 
-  }
-  document.getElementById("scramble").innerHTML = myString;
+                index = (parseInt(18*Math.random()));
+                
+                if(i > 0){
+                    if(Math.abs(lastIndex - index) <= 2){
+                        if(index+3 > 18){
+                            index = 0;
+                        }else{
+                            index += 3;
+                        }
+                    }
+                }
+                myArr.push(moves[index]);
+                lastIndex = index;
+
+            }
+
+  document.getElementById("scramble").innerHTML = myArr.join(" ");
 }
 
 document.addEventListener('DOMContentLoaded', function() {
