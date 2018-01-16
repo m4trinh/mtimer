@@ -1,4 +1,3 @@
-
 {
 var timerInterval = null;
 var totalmSecond = 0;
@@ -22,10 +21,10 @@ function start () {
 
 function changeValue() {
 
-	totalmSecond += 10;
-	
-	document.getElementById("time").innerHTML = formatTime(totalmSecond);
-  	
+  totalmSecond += 10;
+  
+  document.getElementById("time").innerHTML = formatTime(totalmSecond);
+    
 
 }
 
@@ -41,7 +40,7 @@ function formatTime(totalmSecond){
 
 
 var stop = function () {
-	generateScramble(); 
+  generateScramble(); 
   times.push(totalmSecond);
   clearInterval(timerInterval);
   totalmSecond =0;
@@ -82,9 +81,9 @@ var stop = function () {
 
 document.onkeydown = function (e) {
     if (e.keyCode == 32) {
-    	
-    	modifyTimer();
-    	
+      
+      modifyTimer();
+      
     }
 } 
 
@@ -133,7 +132,8 @@ document.addEventListener('DOMContentLoaded', function() {
     var link = document.getElementById('execute');
     // onClick's logic below:
     link.addEventListener('click', function() {
-        chrome.tabs.create({url: "main.html"});
+         chrome.tabs.create({ url: "mtimer-index.html" });
+         
     });
 });
   
@@ -141,3 +141,5 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 }
+
+
