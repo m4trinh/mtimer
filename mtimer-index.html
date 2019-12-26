@@ -1,36 +1,24 @@
 <html>
-
-	<head>
-		<title>mTimer</title>
-	   <link rel = "stylesheet" type = "text/css" href = "mtimer-style.css"/>
-	   <link href="https://fonts.googleapis.com/css?family=Didact+Gothic" rel="stylesheet">
-	</head>
-
-	<body>
-		
-			<a onclick="modifyTimer();">
-			<center>
-				
-				<h1 id = "scramble"></h1>
-				<div class = "timer">
-					<p id = "time">0</p>
-				</div>
-
-				<h2 id = "avg3" class = "stats"> Avg of 3: </h2>
-				<h2 id = "avg5" class = "stats"> Avg of 5: </h2>
-				<h2 id = "avg10" class = "stats"> Avg of 10: </h2>
-
-				<h2>Start or end timer by pressing space or left click</h2>
-
-				<ul id = "listOfTimes"></ul>
-
-			</center>
-
-				<script src="functions.js"></script>
-					</a>
-				
-		
-	</body>
-
-
+  <head>
+    <title>mTimer</title>
+    <link rel="stylesheet" type="text/css" href="mtimer-style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Didact+Gothic"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <a onclick="modifyTimer();">
+        <h1 id="scramble"></h1>
+        <div class="timer">
+          <p id="time">0</p>
+        </div>
+        <h2 id="avg3" class="stats">Avg of 3:</h2>
+        <h2 id="avg5" class="stats">Avg of 5:</h2>
+        <h2 id="avg10" class="stats">Avg of 10:</h2>
+        <h2>Start or end timer by pressing space or left click</h2>
+        <ul id="listOfTimes"></ul>
+      <script src="functions.js"></script>
+    </a>
+  </body>
 </html>
